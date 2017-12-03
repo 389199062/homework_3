@@ -26,6 +26,7 @@ public class Recommender extends JFrame {
         super("Recommender");
         setLayout(null);
         setBounds(0,0,600,350);
+
         label1 = new JLabel(Marmix[0].getKey()+"  "+stocks[Marmix[0].getKey()].getInformation(5));
         label2 = new JLabel(Marmix[1].getKey()+"  "+stocks[Marmix[1].getKey()].getInformation(5));
         label3 = new JLabel(Marmix[2].getKey()+"  "+stocks[Marmix[2].getKey()].getInformation(5));
@@ -58,16 +59,17 @@ public class Recommender extends JFrame {
         label9.setLocation(new Point(10,340));
         label10.setLocation(new Point(10,380));
 
-//        label1.addMouseListener(new MyMouseListener(stocks[Marmix[0].getKey()],list));
-//        label2.addMouseListener(new MyMouseListener(stocks[Marmix[1].getKey()],list));
-//        label3.addMouseListener(new MyMouseListener(stocks[Marmix[2].getKey()],list));
-//        label4.addMouseListener(new MyMouseListener(stocks[Marmix[3].getKey()],list));
-//        label5.addMouseListener(new MyMouseListener(stocks[Marmix[4].getKey()],list));
-//        label6.addMouseListener(new MyMouseListener(stocks[Marmix[5].getKey()],list));
-//        label7.addMouseListener(new MyMouseListener(stocks[Marmix[6].getKey()],list));
-//        label8.addMouseListener(new MyMouseListener(stocks[Marmix[7].getKey()],list));
-//        label9.addMouseListener(new MyMouseListener(stocks[Marmix[8].getKey()],list));
-//        label10.addMouseListener(new MyMouseListener(stocks[Marmix[9].getKey()],list));
+        label1.addMouseListener(new MyMouseListener(stocks[Marmix[0].getKey()],list));
+        label2.addMouseListener(new MyMouseListener(stocks[Marmix[1].getKey()],list));
+        label3.addMouseListener(new MyMouseListener(stocks[Marmix[2].getKey()],list));
+        label4.addMouseListener(new MyMouseListener(stocks[Marmix[3].getKey()],list));
+        label5.addMouseListener(new MyMouseListener(stocks[Marmix[4].getKey()],list));
+        label6.addMouseListener(new MyMouseListener(stocks[Marmix[5].getKey()],list));
+        label7.addMouseListener(new MyMouseListener(stocks[Marmix[6].getKey()],list));
+        label8.addMouseListener(new MyMouseListener(stocks[Marmix[7].getKey()],list));
+        label9.addMouseListener(new MyMouseListener(stocks[Marmix[8].getKey()],list));
+        label10.addMouseListener(new MyMouseListener(stocks[Marmix[9].getKey()],list));
+
         add(label1);
         add(label2);
         add(label3);
@@ -78,7 +80,5 @@ public class Recommender extends JFrame {
         add(label8);
         add(label9);
         add(label10);
-
-
     }
 }

@@ -22,10 +22,10 @@ public class LabelListener extends java.awt.event.MouseAdapter {
     }
 
     public void mouseClicked(MouseEvent e) {
-        final MouseEvent me=e;
+        final MouseEvent mouseEvent=e;
         int clickTimes = e.getClickCount();
         if (clickTimes == 2) {
-            this.mouseDoubleClicked(me,stock);
+            this.mouseDoubleClicked(mouseEvent,stock);
         }
 
 

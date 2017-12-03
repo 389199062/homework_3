@@ -20,13 +20,13 @@ public class FileDivede extends JFrame {
 
     private JFileChooser fileChooser;
     private JButton fileButton;
-//    private FileHandler fileHandler;
+    private FileHandler fileHandler=new FileHandlerImpl();
     private JPanel panel1;
     private JButton searchButton;
     private JTextArea textSearch;
     private List kywords;
     private StockInfo[] stocks;
-    private TF_IDF compare;
+    private TF_IDF compare=new TF_IDFImpl();
 
 
     public FileDivede(){
@@ -45,7 +45,6 @@ public class FileDivede extends JFrame {
         add(fileButton);
         add(searchButton);
         add(textSearch);
-        compare = new TF_IDFImpl();
 
         fileButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -54,20 +53,12 @@ public class FileDivede extends JFrame {
                 fileChooser.showOpenDialog(null);
                 File file = fileChooser.getSelectedFile();
                 String path = file.getAbsolutePath();
-                FileHandler fileHandler = new FileHandleImpl();
                 stocks = fileHandler.getStockInfoFromFile(path);
-                System.out.println("mlgb");
-
             }
         });
         searchButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String s = textSearch.getText();
-//                Pair<String,Double>[] list = compare.getResult( compare.getWordsFromInput(stocks),stocks);
-//                Pair<Integer,Double>[] l = compare.CompareSentence(stocks,list,s);
-//                Recommender recommender = new Recommender(stocks,l,compare.getsameWordsList());
-//                recommender.setVisible(true);
-                System.out.println(s);
             }
         });
     }
